@@ -1,0 +1,27 @@
+﻿<Window x:Class="PasswordResetApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Password Reset App" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Create and Encrypt Password" FontWeight="Bold"/>
+            <TextBox x:Name="PasswordInput" Width="200" Margin="5"/>
+            <Button Content="Create Password" Click="CreatePassword_Click" Width="200" Margin="5"/>
+
+            <TextBlock Text="Brute Force Attack" FontWeight="Bold" Margin="20,10,0,0"/>
+            <TextBlock Text="Max Threads" Margin="5"/>
+            <TextBox x:Name="MaxThreadsInput" Width="200" Margin="5"/>
+            <Button Content="Start Attack" Click="StartAttack_Click" Width="200" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="10,20,0,0">
+                <TextBlock Text="Result: " FontWeight="Bold"/>
+                <TextBlock x:Name="ResultTextBlock" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10,5,0,0">
+                <TextBlock Text="Elapsed Time: " FontWeight="Bold"/>
+                <TextBlock x:Name="TimeTextBlock" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
